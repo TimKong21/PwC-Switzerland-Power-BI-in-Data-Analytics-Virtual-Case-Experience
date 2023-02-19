@@ -17,6 +17,8 @@ Create a dashboard in Power BI for Claire that reflects all relevant Key Perform
 - Average speed of answer
 - Agent’s performance quadrant -> average handle time (talk duration) vs calls answered
 
+![Call Centre Trends](Task%201%20-%20Call%20Centre%20Trends/Call%20Centre%20Trends-1.png)
+
 ## Task 2: Customer Retention
 A few weeks after presenting your dashboard to the management, the Retention Manager from the telecom reaches out to you directly. He was impressed by your work and asked if you can put together a dashboard about customer retention.
 
@@ -27,6 +29,9 @@ In addition, to better understand the data, the telecom Retention Manager has sc
 - We have done customer analysis with Excel: it has always ended in a dead-end
 - We would like to know more about our customers: visualised clearly so that it’s self-explanatory for our management
 The Retentions Manager has provided some information, have a look through the resource section.
+
+![Customer Retention](Task%202%20-%20Customer%20Retention/Customer%20Churn%20and%20Risk%20Analysis-1.png)
+![Customer Retention](Task%202%20-%20Customer%20Retention/Customer%20Churn%20and%20Risk%20Analysis-2.png)
 
 ## Task 3: Diversity & Inclusion
 Human Resources at our telecom client is highly into diversity and inclusion. They’ve been working hard to improve gender balance at the executive management level, but they’re not seeing any progress. They’re reaching out to us for help.
@@ -44,6 +49,10 @@ Here is a hint: Calculating the following **measures** could help to define prop
 - % turnover 
 - Average performance rating: men
 - Average Performance rating: women
+
+![Diversity & Inclusion](Task%203%20-%20Diversity%20&%20Inclusion/Diversity%20&%20Inclusion-1.png)
+![Diversity & Inclusion](Task%203%20-%20Diversity%20&%20Inclusion/Diversity%20&%20Inclusion-2.png)
+
 ## Reference
  - [Forage - PwC Switzerland Power BI in Data Analytics Virtual Case Experience](https://www.theforage.com/virtual-internships/prototype/a87GpgE6tiku7q3gu/Power%20BI%20in%20Data%20Analytics?ref=zYi2CnpbWjhcS7sAk)
  
