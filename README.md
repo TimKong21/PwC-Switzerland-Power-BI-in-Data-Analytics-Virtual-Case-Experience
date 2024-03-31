@@ -26,7 +26,9 @@ To download the `.pbix` files, navigate to the folder in this repository where t
 
 ### Call Centre Trends
 
-The first dashboard provides a comprehensive view of call centre metrics, focusing on customer satisfaction, call volumes, and agent performance. It aids in identifying areas for improvement in call centre operations.
+The first dashboard provides a comprehensive view of call centre metrics, focusing on customer satisfaction, call volumes, and agent performance. It aids in identifying areas for improvement in call centre operations. 
+
+Access [here](https://www.novypro.com/project/pwc-switzerland-virtual-case-experience---task-1-call-center-trends-power-bi) for live and interactive dashboards.
 
 <p align="center">
     <img src="README%20assests/Call%20Centre%20Trends-1.png" alt="Call Centre Trends" style="width: 80%"/>
@@ -35,6 +37,8 @@ The first dashboard provides a comprehensive view of call centre metrics, focusi
 ### Customer Retention
 
 This dashboard was developed in response to a request from the telecom's Retention Manager, showcasing key metrics related to customer loyalty and retention. It visualizes data to predict customer churn and identifies potential strategies to enhance customer retention.
+
+Access [here](https://www.novypro.com/project/pwc-switzerland-virtual-case-experience---task-2-customer-churn-and-risk-analysis-power-bi) for live and interactive dashboards.
 
 <p align="center">
     <img src="README%20assests/Customer%20Churn%20and%20Risk%20Analysis-1.png" alt="Customer Retention 1" style="width: 80%"/>
@@ -47,6 +51,8 @@ This dashboard was developed in response to a request from the telecom's Retenti
 ### Diversity & Inclusion
 
 Focusing on the telecom client's goal of improving gender balance at the executive management level, this dashboard visualizes metrics related to diversity and inclusion, offering insights into current trends and areas for action.
+
+Access [here](https://www.novypro.com/project/pwc-switzerland-virtual-case-experience---task-3-diversity--inclusion-power-bi) for live and interactive dashboards.
 
 <p align="center">
     <img src="README%20assests/Diversity%20&%20Inclusion-1.png" alt="Diversity & Inclusion 1" style="width: 80%"/>
