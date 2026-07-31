@@ -3,111 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Diversity and Inclusion decision support: representation and promotion insights, KPI definitions and a stakeholder playbook.">
+    <meta name="description" content="Source-driven recreation of both Diversity and Inclusion analysis report pages.">
     <title>Diversity &amp; Inclusion | Telecom Customer Operations Decision Hub</title>
     <link rel="stylesheet" href="./assets/styles.css">
+    <script type="module" src="./assets/charts.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="./index.html" aria-label="Telecom Customer Operations Decision Hub home"><span class="brand-mark" aria-hidden="true">TCO</span><span>Decision Hub</span></a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="./index.html">Overview</a>
-          <a href="./service-operations.html">Service Operations</a>
-          <a href="./customer-retention.html">Customer Retention</a>
-          <a href="./diversity-inclusion.html" aria-current="page">Diversity &amp; Inclusion</a>
-        </nav>
-      </div>
-    </header>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="./index.html" aria-label="Decision Hub home"><span class="brand-mark" aria-hidden="true">TCO</span><span>Decision Hub</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="./index.html">Overview</a><a href="./service-operations.html">Service Operations</a><a href="./customer-retention.html">Customer Retention</a><a href="./diversity-inclusion.html" aria-current="page">Diversity &amp; Inclusion</a></nav></div></header>
 
     <main id="main-content">
-      <section class="hero">
-        <div class="shell">
-          <p class="eyebrow">Focus area 03 / Diversity &amp; Inclusion</p>
-          <h1>Make the leadership pipeline visible</h1>
-          <p class="hero-copy">Use representation, promotion and attrition measures to focus governance questions on workforce equity and talent-process design.</p>
-          <div class="hero-meta"><span class="pill">500 employees</span><span class="pill">FY20–FY21 case data</span><span class="pill">Representation &amp; promotion review</span></div>
-        </div>
-      </section>
+      <section class="hero"><div class="shell"><p class="eyebrow">Task 3 / two source report pages</p><h1>Diversity &amp; inclusion analysis</h1><p class="hero-copy">Two source-driven views recreate the workforce reporting themes: hiring and promotion history, then performance, executive balance and age structure.</p><div class="hero-meta"><span class="pill">500 employees</span><span class="pill">FY20–FY21 case data</span><span class="pill">Two report views</span></div></div></section>
 
       <div class="shell">
-        <section class="section" aria-labelledby="di-kpis-title">
-          <div class="section-header"><div><p class="eyebrow">Portfolio-case signals</p><h2 id="di-kpis-title">Representation narrows at senior levels</h2></div></div>
-          <div class="kpi-grid">
-            <article class="kpi"><span class="label">Female representation</span><strong class="value">41.0%</strong><small>205 of 500 employees</small></article>
-            <article class="kpi alert"><span class="label">Executive female representation</span><strong class="value">15.8%</strong><small>3 of 19 executives</small></article>
-            <article class="kpi alert"><span class="label">Director female representation</span><strong class="value">12.1%</strong><small>4 of 33 directors</small></article>
-            <article class="kpi warn"><span class="label">FY21 promotion rate</span><strong class="value">12.2%</strong><small>eligible female group; 14.5% for eligible male group</small></article>
-          </div>
+        <div class="report-tabs" data-report-tabs role="tablist" aria-label="Task 3 report pages"><button type="button" role="tab" aria-selected="true" aria-controls="inclusion-history" data-tab-target="inclusion-history">01 / Hiring, promotion &amp; turnover</button><button type="button" role="tab" aria-selected="false" aria-controls="inclusion-balance" data-tab-target="inclusion-balance">02 / Performance, balance &amp; age</button></div>
+
+        <section id="inclusion-history" class="report-sheet" role="tabpanel" aria-label="Diversity and Inclusion Analysis Dashboard I">
+          <div class="section"><div class="section-header"><div><p class="eyebrow">Original page 1 / hiring, promotion &amp; turnover</p><h2>Track the leadership pipeline with comparable cohorts</h2><p class="section-intro">Charts are derived from the supplied <code>Pharma Group AG</code> sheet, using the original job-level, promotion and performance fields.</p></div></div><div class="kpi-grid"><article class="kpi"><span class="label">Female workforce share</span><strong class="value" data-metric="inclusion.pageOne.kpis.womenWorkforceShare" data-format="percent"></strong><small>205 of 500 employees</small></article><article class="kpi"><span class="label">Male workforce share</span><strong class="value" data-metric="inclusion.pageOne.kpis.menWorkforceShare" data-format="percent"></strong><small>295 of 500 employees</small></article><article class="kpi warn"><span class="label">FY20 leaver rate</span><strong class="value" data-metric="inclusion.pageOne.kpis.overallTurnoverRate" data-format="percent"></strong><small>Source-workbook calculation across all employees</small></article><article class="kpi"><span class="label">FY21 eligible women promoted</span><strong class="value" data-metric="inclusion.pageOne.kpis.womenPromotionRate" data-format="percent"></strong><small>Eligible-cohort denominator</small></article></div><p class="source-line">Metric reconciliation: the PBIX reference visual shows 10.1% turnover; the supplied workbook calculates 9.4% (47 of 500 FY20 leavers) across all employees. This site displays the auditable workbook result rather than a hard-coded PBIX value.</p></div>
+          <div class="section grid grid-2"><article class="chart-card"><p class="eyebrow">Hiring history</p><h2>Gender by job level after FY20 promotions</h2><p class="chart-note">The original report’s workforce distribution, rendered from raw employee records.</p><div class="chart-host" data-chart="grouped" data-source="inclusion.pageOne.hiringByLevel" data-series="Female:Female:coral,Male:Male:gold"></div></article><article class="chart-card"><p class="eyebrow">FY21 promotion</p><h2>Promotion outcomes by job level</h2><p class="chart-note">Counts of employees marked promoted in FY21, split by gender.</p><div class="chart-host" data-chart="grouped" data-source="inclusion.pageOne.promotionByLevel" data-series="Female:Female:coral,Male:Male:gold"></div><div class="chart-host" data-chart="table" data-source="inclusion.pageOne.promotionByLevel" data-columns="label:Job level,Female:Female promotions,Male:Male promotions,femaleShare:Female share:percent"></div></article><article class="chart-card"><p class="eyebrow">Tenure in level</p><h2>Average years in job level</h2><p class="chart-note">Mean time in the job level at 01 July 2020.</p><div class="chart-host" data-chart="grouped" data-source="inclusion.pageOne.timeInLevel" data-series="Female:Female:coral,Male:Male:gold" data-format="decimal"></div></article><article class="chart-card"><p class="eyebrow">Performance and turnover context</p><h2>Average FY20 performance rating</h2><p class="chart-note">Mean available performance rating by job level and gender.</p><div class="chart-host" data-chart="grouped" data-source="inclusion.pageOne.performanceByLevel" data-series="Female:Female:coral,Male:Male:gold" data-format="decimal"></div></article></div>
         </section>
 
-        <section class="section grid grid-2" aria-labelledby="di-charts-title">
-          <div class="chart-card">
-            <p class="eyebrow">Representation pipeline</p>
-            <h2 id="di-charts-title">Gender composition by job level</h2>
-            <p class="chart-note">Female and male counts after FY21 promotions; bars show the composition within each listed level.</p>
-            <div class="stacked-key" aria-hidden="true"><span class="key">Female</span><span class="key male">Male</span></div>
-            <div class="stacked-chart" role="img" aria-label="Female representation by job level: Executive 15.8%, Director 12.1%, Senior Manager 19.3%, Manager 31.6%, Senior Officer 52.1%, Junior Officer 53.8%.">
-              <div class="stacked-row"><span class="bar-label">Executive</span><span class="stack"><span class="female" style="width:15.8%"></span><span class="male" style="width:84.2%"></span></span><span class="bar-value">3F / 16M</span></div>
-              <div class="stacked-row"><span class="bar-label">Director</span><span class="stack"><span class="female" style="width:12.1%"></span><span class="male" style="width:87.9%"></span></span><span class="bar-value">4F / 29M</span></div>
-              <div class="stacked-row"><span class="bar-label">Senior Manager</span><span class="stack"><span class="female" style="width:19.3%"></span><span class="male" style="width:80.7%"></span></span><span class="bar-value">11F / 46M</span></div>
-              <div class="stacked-row"><span class="bar-label">Manager</span><span class="stack"><span class="female" style="width:31.6%"></span><span class="male" style="width:68.4%"></span></span><span class="bar-value">25F / 54M</span></div>
-              <div class="stacked-row"><span class="bar-label">Senior Officer</span><span class="stack"><span class="female" style="width:52.1%"></span><span class="male" style="width:47.9%"></span></span><span class="bar-value">50F / 46M</span></div>
-              <div class="stacked-row"><span class="bar-label">Junior Officer</span><span class="stack"><span class="female" style="width:53.8%"></span><span class="male" style="width:46.2%"></span></span><span class="bar-value">91F / 78M</span></div>
-            </div>
-          </div>
-          <div class="chart-card">
-            <p class="eyebrow">Promotion and attrition</p>
-            <h2>Eligible-cohort comparison</h2>
-            <p class="chart-note">Rates use the supplied eligibility flags, preserving the case dataset's denominator definition.</p>
-            <div class="bar-chart" role="img" aria-label="Promotion rates in eligible FY21 cohort: male 14.5%, female 12.2%. FY20 leaver rates in base group: female 12.3%, male 9.9%.">
-              <div class="bar-row"><span class="bar-label">FY21 promotion: male</span><span class="bar-track"><span class="bar gold" style="width:72.5%"></span></span><span class="bar-value">14.5%</span></div>
-              <div class="bar-row"><span class="bar-label">FY21 promotion: female</span><span class="bar-track"><span class="bar" style="width:61%"></span></span><span class="bar-value">12.2%</span></div>
-              <div class="bar-row"><span class="bar-label">FY20 leavers: female</span><span class="bar-track"><span class="bar coral" style="width:61.5%"></span></span><span class="bar-value">12.3%</span></div>
-              <div class="bar-row"><span class="bar-label">FY20 leavers: male</span><span class="bar-track"><span class="bar gold" style="width:49.5%"></span></span><span class="bar-value">9.9%</span></div>
-            </div>
-          </div>
+        <section id="inclusion-balance" class="report-sheet" role="tabpanel" aria-label="Diversity and Inclusion Analysis Dashboard II" hidden>
+          <div class="section"><div class="section-header"><div><p class="eyebrow">Original page 2 / performance, executive balance &amp; age</p><h2>Make representation and progression visible</h2><p class="section-intro">This view mirrors the second D&amp;I report page with native performance, executive-balance, promotion-rate and workforce-structure visuals.</p></div></div><div class="kpi-grid"><article class="kpi"><span class="label">Average rating: men</span><strong class="value" data-metric="inclusion.pageTwo.kpis.averageRatingMen" data-format="decimal"></strong><small>FY20 performance rating</small></article><article class="kpi"><span class="label">Average rating: women</span><strong class="value" data-metric="inclusion.pageTwo.kpis.averageRatingWomen" data-format="decimal"></strong><small>FY20 performance rating</small></article><article class="kpi warn"><span class="label">Employees aged 20–29</span><strong class="value" data-metric="inclusion.pageTwo.kpis.age20to29"></strong><small>Largest age group in the source workbook</small></article><article class="kpi alert"><span class="label">Female executive share FY21</span><strong class="value" data-metric="inclusion.pageTwo.kpis.womenExecutiveShareFY21" data-format="percent"></strong><small>3 of 19 executives after FY21 promotions</small></article></div></div>
+          <div class="section grid grid-2"><article class="chart-card"><p class="eyebrow">KPI 4 / Performance rating</p><h2>FY20 rating distribution</h2><p class="chart-note">Employees with an available FY20 performance rating, split by gender.</p><div class="chart-host" data-chart="grouped" data-source="inclusion.pageTwo.performanceDistribution" data-series="Female:Female:coral,Male:Male:gold"></div></article><article class="chart-card"><p class="eyebrow">KPI 5 / Executive gender balance</p><h2>Executive composition before and after FY21</h2><div class="grid grid-2"><div><h3>FY20 job level</h3><div class="chart-host" data-chart="donut" data-source="inclusion.pageTwo.executiveBalance.fy20" data-value="share" data-format="percent" data-center="FY20"></div></div><div><h3>FY21 job level</h3><div class="chart-host" data-chart="donut" data-source="inclusion.pageTwo.executiveBalance.fy21" data-value="share" data-format="percent" data-center="FY21"></div></div></div></article><article class="chart-card"><p class="eyebrow">Promotion rate</p><h2>FY21 eligible cohort</h2><p class="chart-note">Promotion rate equals employees marked promoted in FY21 divided by the source workbook’s eligibility base group.</p><div class="chart-host" data-chart="bar" data-source="inclusion.pageTwo.promotionRate" data-value="rate" data-format="percent" data-max="20" data-color="coral"></div></article><article class="chart-card"><p class="eyebrow">KPI 6 / Age and level</p><h2>Age group by job level after FY21</h2><p class="chart-note">The source counts behind the original workforce-structure visual.</p><div class="chart-host" data-chart="table" data-source="inclusion.pageTwo.ageLevel" data-columns="ageGroup:Age group,level:Job level,count:Employees"></div></article></div>
         </section>
 
-        <section class="section" aria-labelledby="di-definitions-title">
-          <div class="section-header"><div><p class="eyebrow">KPI definitions</p><h2 id="di-definitions-title">Use comparable denominators</h2></div></div>
-          <dl class="definition-grid">
-            <div><dt>Representation</dt><dd>Employees of a gender divided by all employees in the stated job-level cohort after FY21 promotions.</dd></div>
-            <div><dt>Promotion rate</dt><dd>Employees marked promoted in FY21 divided by employees included in the supplied FY21 promotion base group.</dd></div>
-            <div><dt>Leaver rate</dt><dd>Employees marked as FY20 leavers divided by employees in the supplied FY20 turnover base group.</dd></div>
-          </dl>
-        </section>
+        <section class="section" aria-labelledby="inclusion-playbook"><p class="eyebrow">Stakeholder decision playbook</p><h2 id="inclusion-playbook">Move from representation data to process review</h2><div style="overflow-x:auto; margin-top:1.3rem;"><table class="playbook"><caption>Diversity and inclusion decision playbook</caption><thead><tr><th scope="col">Signal</th><th scope="col">Question to validate</th><th scope="col">Recommended action</th><th scope="col">Accountable owner</th><th scope="col">Success measure</th></tr></thead><tbody><tr><td>Female share changes across job levels and is <span data-metric="inclusion.pageTwo.kpis.womenExecutiveShareFY21" data-format="percent"></span> at executive level after FY21.</td><td>At which transition—hiring, promotion or retention—does the pipeline change most?</td><td>Map the eligible talent pool and succession slate at every monitored transition.</td><td>Chief People Officer &amp; Executive Sponsor</td><td>Representation and candidate-slate mix at each transition.</td></tr><tr><td>Promotion rates use the supplied eligibility-base definition.</td><td>Are performance, tenure and job-level distributions comparable across eligible cohorts?</td><td>Run a controlled promotion-process review and document any intervention.</td><td>Talent Management Lead</td><td>Promotion rate by comparable cohort and completed review actions.</td></tr></tbody></table></div><p class="source-line">Analysis source: <code>03 Diversity-Inclusion-Dataset.xlsx</code>, <code>Pharma Group AG</code> sheet. Both PBIX report pages were inspected read-only to match the report structure.</p></section>
 
-        <section class="section" aria-labelledby="di-playbook-title">
-          <p class="eyebrow">Stakeholder decision playbook</p>
-          <h2 id="di-playbook-title">Move from representation data to process review</h2>
-          <div style="overflow-x:auto; margin-top:1.3rem;">
-            <table class="playbook">
-              <caption>Diversity and inclusion decision playbook</caption>
-              <thead><tr><th scope="col">Signal</th><th scope="col">Question to validate</th><th scope="col">Recommended action</th><th scope="col">Accountable owner</th><th scope="col">Success measure</th></tr></thead>
-              <tbody>
-                <tr><td>Female representation is 15.8% at executive level and 12.1% at director level.</td><td>At which transition—hiring, succession, promotion or retention—does the senior-level pipeline change most?</td><td>Map eligible talent pools and succession slates by level; review candidate-selection criteria and decision records.</td><td>Chief People Officer &amp; Executive Sponsor</td><td>Representation and candidate-slate composition at each monitored transition.</td></tr>
-                <tr><td>FY21 promotion rate is 12.2% for eligible women and 14.5% for eligible men.</td><td>Are performance ratings, role levels, time in level and functions comparable across the eligible cohorts?</td><td>Run a controlled promotion-process review using consistent eligibility, performance and role-level cuts; document any intervention.</td><td>Talent Management Lead</td><td>Promotion rate by comparable cohort and completion of documented review actions.</td></tr>
-                <tr><td>FY20 leaver rate is 12.3% for the female turnover base group and 9.9% for the male group.</td><td>Do exit patterns differ by level, function, tenure or manager population?</td><td>Triangulate exit reasons with talent and engagement data, applying minimum-group-size safeguards before acting.</td><td>People Analytics Lead</td><td>Leaver rate by approved cohort and retention of identified talent segments.</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="source-line">Figure source: <code>03 Diversity-Inclusion-Dataset.xlsx</code>, sheet <code>Pharma Group AG</code>. Values are derived from the supplied portfolio-case workbook.</p>
-        </section>
-
-        <section class="section" aria-labelledby="di-evidence-title">
-          <details class="evidence">
-            <summary id="di-evidence-title">View original portfolio-case dashboard evidence</summary>
-            <figure>
-              <img src="./assets/evidence/Diversity%20%26%20Inclusion-1.png" alt="Original Power BI case dashboard showing diversity and inclusion analysis.">
-              <figcaption>Existing dashboard asset from the original portfolio repository. This static site does not load or embed Power BI.</figcaption>
-            </figure>
-          </details>
-        </section>
+        <section class="section"><details class="evidence"><summary>View the two original Power BI pages used as report-layout reference</summary><figure><img src="./assets/evidence/Diversity%20%26%20Inclusion-1.png" alt="Original Diversity and Inclusion analysis dashboard page one."><figcaption>Original Task 3 page 1: hiring, promotion and turnover.</figcaption></figure><figure style="margin-top:1.3rem;"><img src="./assets/evidence/Diversity%20%26%20Inclusion-2.png" alt="Original Diversity and Inclusion analysis dashboard page two."><figcaption>Original Task 3 page 2: performance, executive gender balance and age group.</figcaption></figure></details></section>
       </div>
     </main>
-
-    <footer class="footer"><div class="shell footer-grid"><div><h2>Independent portfolio project</h2><p class="footer-disclaimer">Inspired by the PwC Switzerland / Forage virtual case experience. This product is independently created for portfolio purposes and is not commissioned, endorsed by, or affiliated with PwC.</p></div><div><h2>Next decision area</h2><ul><li><a href="./service-operations.html">Service Operations</a></li><li><a href="./customer-retention.html">Customer Retention</a></li></ul></div></div></footer>
+    <footer class="footer"><div class="shell footer-grid"><div><h2>Independent portfolio project</h2><p class="footer-disclaimer">Inspired by the PwC Switzerland / Forage virtual case experience. This product is independently created for portfolio purposes and is not commissioned, endorsed by, or affiliated with PwC.</p></div><div><h2>Explore the decision hub</h2><ul><li><a href="./service-operations.html">Service Operations</a></li><li><a href="./customer-retention.html">Customer Retention</a></li></ul></div></div></footer>
   </body>
 </html>

@@ -6,6 +6,7 @@
     <meta name="description" content="Telecom Customer Operations Decision Hub: portfolio decision support for service performance, customer retention, and workforce inclusion.">
     <title>Executive Overview | Telecom Customer Operations Decision Hub</title>
     <link rel="stylesheet" href="./assets/styles.css">
+    <script type="module" src="./assets/charts.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -50,19 +51,19 @@
           <div class="grid grid-3">
             <article class="card">
               <span class="card-topline">01 / Service Operations</span>
-              <strong class="card-number">81.1%</strong>
-              <p class="card-description">of 5,000 case-period calls were answered. The focus is access, resolution and experience by call topic.</p>
+              <strong class="card-number" data-metric="callCenter.kpis.answeredRate" data-format="percent"></strong>
+              <p class="card-description">of <span data-metric="callCenter.kpis.totalCalls"></span> case-period calls were answered. The focus is access, resolution and experience by call topic.</p>
               <a class="card-link" href="./service-operations.html">Review service operations <span aria-hidden="true">→</span></a>
             </article>
             <article class="card">
               <span class="card-topline">02 / Customer Retention</span>
-              <strong class="card-number">26.5%</strong>
-              <p class="card-description">of 7,043 customers were recorded as churned. The focus is identifying segments for retention review.</p>
+              <strong class="card-number" data-metric="churn.kpis.overallChurnRate" data-format="percent"></strong>
+              <p class="card-description">of <span data-metric="churn.kpis.totalCustomers"></span> customers were recorded as churned. The focus is identifying segments for retention review.</p>
               <a class="card-link" href="./customer-retention.html">Review retention signals <span aria-hidden="true">→</span></a>
             </article>
             <article class="card">
               <span class="card-topline">03 / Workforce Inclusion</span>
-              <strong class="card-number">15.8%</strong>
+              <strong class="card-number" data-metric="inclusion.pageTwo.kpis.womenExecutiveShareFY21" data-format="percent"></strong>
               <p class="card-description">female representation in the 19-person executive cohort. The focus is pipeline and promotion equity.</p>
               <a class="card-link" href="./diversity-inclusion.html">Review inclusion signals <span aria-hidden="true">→</span></a>
             </article>

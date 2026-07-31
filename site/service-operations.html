@@ -3,108 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Service Operations decision support: call-centre performance insights, KPI definitions and an analyst decision playbook.">
+    <meta name="description" content="A source-driven recreation of the Call Center Trend Analysis report, with operational decision support.">
     <title>Service Operations | Telecom Customer Operations Decision Hub</title>
     <link rel="stylesheet" href="./assets/styles.css">
+    <script type="module" src="./assets/charts.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="./index.html" aria-label="Telecom Customer Operations Decision Hub home"><span class="brand-mark" aria-hidden="true">TCO</span><span>Decision Hub</span></a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="./index.html">Overview</a>
-          <a href="./service-operations.html" aria-current="page">Service Operations</a>
-          <a href="./customer-retention.html">Customer Retention</a>
-          <a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a>
-        </nav>
-      </div>
-    </header>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="./index.html" aria-label="Decision Hub home"><span class="brand-mark" aria-hidden="true">TCO</span><span>Decision Hub</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="./index.html">Overview</a><a href="./service-operations.html" aria-current="page">Service Operations</a><a href="./customer-retention.html">Customer Retention</a><a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a></nav></div></header>
 
     <main id="main-content">
-      <section class="hero">
-        <div class="shell">
-          <p class="eyebrow">Focus area 01 / Service Operations</p>
-          <h1>Make contact demand actionable</h1>
-          <p class="hero-copy">Use call access, resolution and satisfaction signals to focus operational investigation—not to judge individual performance in isolation.</p>
-          <div class="hero-meta"><span class="pill">5,000 calls</span><span class="pill">January–March 2021</span><span class="pill">Source-backed native visuals</span></div>
-        </div>
-      </section>
+      <section class="hero"><div class="shell"><p class="eyebrow">Task 1 / one source report page</p><h1>Call Center Trend Analysis</h1><p class="hero-copy">A data-driven recreation of the original operational report: calls are analysed directly from the supplied workbook and rendered as native web charts.</p><div class="hero-meta"><span class="pill"><span data-metric="callCenter.kpis.totalCalls"></span> calls</span><span class="pill">January–March 2021</span><span class="pill">Source workbook analysis</span></div></div></section>
 
       <div class="shell">
-        <section class="section" aria-labelledby="service-kpis-title">
-          <div class="section-header"><div><p class="eyebrow">Case-period performance</p><h2 id="service-kpis-title">Access is the first operational question</h2></div></div>
+        <section class="section" aria-labelledby="service-summary"><div class="section-header"><div><p class="eyebrow">Original report findings</p><h2 id="service-summary">Access, resolution and customer experience</h2><p class="section-intro">Every number and chart on this page is populated after loading <code>case-metrics.json</code>, generated from the original Task 1 workbook.</p></div></div>
           <div class="kpi-grid">
-            <article class="kpi"><span class="label">Answer rate</span><strong class="value">81.1%</strong><small>4,054 of 5,000 calls answered</small></article>
-            <article class="kpi"><span class="label">Resolution among answered</span><strong class="value">89.9%</strong><small>3,646 resolved calls / 4,054 answered</small></article>
-            <article class="kpi warn"><span class="label">Average answer speed</span><strong class="value">67.5s</strong><small>Mean for answered calls</small></article>
-            <article class="kpi"><span class="label">Average satisfaction</span><strong class="value">3.40</strong><small>Mean recorded satisfaction rating</small></article>
+            <article class="kpi"><span class="label">Average answer speed</span><strong class="value" data-metric="callCenter.kpis.averageAnswerSpeed" data-format="seconds"></strong><small>Mean for answered calls</small></article>
+            <article class="kpi"><span class="label">Average satisfaction</span><strong class="value" data-metric="callCenter.kpis.averageSatisfaction" data-format="decimal"></strong><small>Mean recorded rating</small></article>
+            <article class="kpi warn"><span class="label">Calls answered</span><strong class="value" data-metric="callCenter.kpis.answered"></strong><small><span data-metric="callCenter.kpis.answeredRate" data-format="percent"></span> of all calls</small></article>
+            <article class="kpi"><span class="label">Calls resolved</span><strong class="value" data-metric="callCenter.kpis.resolved"></strong><small><span data-metric="callCenter.kpis.resolvedRate" data-format="percent"></span> of all calls</small></article>
           </div>
         </section>
 
-        <section class="section grid grid-2" aria-labelledby="service-charts-title">
-          <div class="chart-card">
-            <p class="eyebrow">Call demand</p>
-            <h2 id="service-charts-title">Volume by month</h2>
-            <p class="chart-note">Case-period call counts. The bars use a 1,800-call scale.</p>
-            <div class="bar-chart" role="img" aria-label="Call volume: January 1,772; February 1,616; March 1,612.">
-              <div class="bar-row"><span class="bar-label">January</span><span class="bar-track"><span class="bar" style="width:98.4%"></span></span><span class="bar-value">1,772</span></div>
-              <div class="bar-row"><span class="bar-label">February</span><span class="bar-track"><span class="bar" style="width:89.8%"></span></span><span class="bar-value">1,616</span></div>
-              <div class="bar-row"><span class="bar-label">March</span><span class="bar-track"><span class="bar" style="width:89.6%"></span></span><span class="bar-value">1,612</span></div>
-            </div>
-          </div>
-          <div class="chart-card">
-            <p class="eyebrow">Access by topic</p>
-            <h2>Answer-rate comparison</h2>
-            <p class="chart-note">Answer rate is answered calls divided by all calls in that topic.</p>
-            <div class="bar-chart" role="img" aria-label="Topic answer rates: Streaming 82.9%, Admin Support 81.5%, Payment related 81.2%, Contract related 80.8%, Technical Support 79.0%.">
-              <div class="bar-row"><span class="bar-label">Streaming</span><span class="bar-track"><span class="bar" style="width:82.9%"></span></span><span class="bar-value">82.9%</span></div>
-              <div class="bar-row"><span class="bar-label">Admin Support</span><span class="bar-track"><span class="bar" style="width:81.5%"></span></span><span class="bar-value">81.5%</span></div>
-              <div class="bar-row"><span class="bar-label">Payment related</span><span class="bar-track"><span class="bar" style="width:81.2%"></span></span><span class="bar-value">81.2%</span></div>
-              <div class="bar-row"><span class="bar-label">Contract related</span><span class="bar-track"><span class="bar gold" style="width:80.8%"></span></span><span class="bar-value">80.8%</span></div>
-              <div class="bar-row"><span class="bar-label">Technical Support</span><span class="bar-track"><span class="bar coral" style="width:79%"></span></span><span class="bar-value">79.0%</span></div>
-            </div>
-          </div>
+        <section class="section grid grid-2" aria-label="Call outcomes and hourly demand">
+          <article class="chart-card"><p class="eyebrow">Calls answered</p><h2>Answer outcome</h2><p class="chart-note">Answered versus not answered across all 5,000 records.</p><div class="chart-host" data-chart="donut" data-source="callCenter.charts.answerOutcome" data-value="share" data-format="percent" data-center="5,000 calls"></div></article>
+          <article class="chart-card"><p class="eyebrow">Operating hours</p><h2>Total calls during operation hours</h2><p class="chart-note">Call volume by hour, matching the original line-chart finding.</p><div class="chart-host" data-chart="line" data-source="callCenter.charts.hourlyCalls" data-value="count"></div></article>
+          <article class="chart-card"><p class="eyebrow">Calls resolved</p><h2>Resolution outcome</h2><p class="chart-note">Resolved versus not resolved across all source records.</p><div class="chart-host" data-chart="donut" data-source="callCenter.charts.resolutionOutcome" data-value="share" data-format="percent" data-center="5,000 calls"></div></article>
+          <article class="chart-card"><p class="eyebrow">Monthly demand</p><h2>Calls per month</h2><p class="chart-note">Answered and unanswered calls by month.</p><div class="chart-host" data-chart="stacked" data-source="callCenter.charts.monthlyCalls" data-series="answered:Answered:teal,unanswered:Not answered:gold"></div></article>
         </section>
 
-        <section class="section" aria-labelledby="definitions-title">
-          <div class="section-header"><div><p class="eyebrow">KPI definitions</p><h2 id="definitions-title">What each measure means</h2></div></div>
-          <dl class="definition-grid">
-            <div><dt>Answer rate</dt><dd>Answered calls divided by total calls, calculated for the case period and each topic.</dd></div>
-            <div><dt>Resolution among answered</dt><dd>Calls marked resolved divided by calls marked answered. It avoids treating an unanswered call as an attempted resolution.</dd></div>
-            <div><dt>Average satisfaction</dt><dd>Arithmetic mean of the recorded satisfaction-rating field; the source workbook does not supply a target benchmark.</dd></div>
-          </dl>
-        </section>
+        <section class="section" aria-labelledby="agent-title"><div class="section-header"><div><p class="eyebrow">Agent statistics</p><h2 id="agent-title">Operational evidence by agent</h2><p class="section-intro">The original report’s agent table is reproduced from the source records; it is a conversation starter, not a performance judgement without workload context.</p></div></div><div class="chart-host" data-chart="table" data-source="callCenter.charts.agentStatistics" data-columns="label:Agent,answered:Answered,resolved:Resolved,satisfaction:Average satisfaction:decimal,answer_speed:Average answer speed (s):decimal"></div></section>
 
-        <section class="section" aria-labelledby="service-playbook-title">
-          <p class="eyebrow">Analyst decision playbook</p>
-          <h2 id="service-playbook-title">Turn a service signal into an accountable next step</h2>
-          <div style="overflow-x:auto; margin-top:1.3rem;">
-            <table class="playbook">
-              <caption>Service operations decision playbook</caption>
-              <thead><tr><th scope="col">Signal</th><th scope="col">Question to validate</th><th scope="col">Recommended action</th><th scope="col">Accountable owner</th><th scope="col">Success measure</th></tr></thead>
-              <tbody>
-                <tr><td>Technical Support has the lowest answer rate (79.0%).</td><td>Does demand timing, staffing coverage or routing differ from other topics?</td><td>Review interval-level demand and queue-routing data before selecting a staffing or routing experiment.</td><td>Contact Centre Operations Lead</td><td>Technical Support answer rate, reported alongside demand and staffing coverage.</td></tr>
-                <tr><td>946 calls were not answered in the case period.</td><td>Where in the customer journey are unanswered calls concentrated?</td><td>Segment the unanswered-call population by time, topic and repeat-contact indicator; prioritise the largest validated cluster.</td><td>Service Performance Manager</td><td>Unanswered-call count and repeat-contact rate for the selected cluster.</td></tr>
-                <tr><td>Resolution among answered calls is 89.9%.</td><td>Which unresolved call types are creating avoidable follow-up work?</td><td>Review unresolved-call notes and hand-off reasons; test a knowledge-base or escalation change with a defined cohort.</td><td>Customer Care Enablement Lead</td><td>Resolution among answered calls and repeat-contact rate for the test cohort.</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="source-line">Figure source: <code>01 Call-Center-Dataset.xlsx</code>. Values are derived from the supplied portfolio-case workbook.</p>
-        </section>
+        <section class="section" aria-labelledby="service-playbook-title"><p class="eyebrow">Analyst decision playbook</p><h2 id="service-playbook-title">Turn the report into an accountable next step</h2><div style="overflow-x:auto; margin-top:1.3rem;"><table class="playbook"><caption>Service operations decision playbook</caption><thead><tr><th scope="col">Signal</th><th scope="col">Question to validate</th><th scope="col">Recommended action</th><th scope="col">Accountable owner</th><th scope="col">Success measure</th></tr></thead><tbody><tr><td><span data-metric="callCenter.kpis.answeredRate" data-format="percent"></span> of calls were answered.</td><td>Does unmet demand cluster by hour, topic or queue?</td><td>Review interval demand and routing before choosing a staffing or routing experiment.</td><td>Contact Centre Operations Lead</td><td>Answer rate with demand and staffing coverage.</td></tr><tr><td><span data-metric="callCenter.kpis.resolvedRate" data-format="percent"></span> of all calls were resolved.</td><td>Which unresolved reasons create repeat contacts?</td><td>Analyse hand-off and unresolved reasons; test a knowledge-base or escalation change.</td><td>Customer Care Enablement Lead</td><td>Resolution and repeat-contact rates for the test cohort.</td></tr></tbody></table></div><p class="source-line">Analysis source: <code>01 Call-Center-Dataset.xlsx</code>. The original PBIX remains untouched.</p></section>
 
-        <section class="section" aria-labelledby="service-evidence-title">
-          <details class="evidence">
-            <summary id="service-evidence-title">View original portfolio-case dashboard evidence</summary>
-            <figure>
-              <img src="./assets/evidence/Call%20Centre%20Trends-1.png" alt="Original Power BI case dashboard showing call centre trends.">
-              <figcaption>Existing dashboard asset from the original portfolio repository. This static site does not load or embed Power BI.</figcaption>
-            </figure>
-          </details>
-        </section>
+        <section class="section"><details class="evidence"><summary>View the original Power BI page used as report-layout reference</summary><figure><img src="./assets/evidence/Call%20Centre%20Trends-1.png" alt="Original Call Center Trend Analysis Power BI dashboard."><figcaption>Reference only. The interactive charts above are native web charts, not an embedded image or Power BI report.</figcaption></figure></details></section>
       </div>
     </main>
-
-    <footer class="footer"><div class="shell footer-grid"><div><h2>Independent portfolio project</h2><p class="footer-disclaimer">Inspired by the PwC Switzerland / Forage virtual case experience. This product is independently created for portfolio purposes and is not commissioned, endorsed by, or affiliated with PwC.</p></div><div><h2>Next decision area</h2><ul><li><a href="./customer-retention.html">Customer Retention</a></li><li><a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a></li></ul></div></div></footer>
+    <footer class="footer"><div class="shell footer-grid"><div><h2>Independent portfolio project</h2><p class="footer-disclaimer">Inspired by the PwC Switzerland / Forage virtual case experience. This product is independently created for portfolio purposes and is not commissioned, endorsed by, or affiliated with PwC.</p></div><div><h2>Explore the decision hub</h2><ul><li><a href="./customer-retention.html">Customer Retention</a></li><li><a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a></li></ul></div></div></footer>
   </body>
 </html>

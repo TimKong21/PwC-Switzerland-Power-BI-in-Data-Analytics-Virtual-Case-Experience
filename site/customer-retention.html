@@ -3,116 +3,44 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Customer Retention decision support: churn and customer-risk insights, KPI definitions and a stakeholder playbook.">
+    <meta name="description" content="Source-driven recreation of both Customer Churn Exploratory and Customer Risk Analysis report pages.">
     <title>Customer Retention | Telecom Customer Operations Decision Hub</title>
     <link rel="stylesheet" href="./assets/styles.css">
+    <script type="module" src="./assets/charts.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a class="brand" href="./index.html" aria-label="Telecom Customer Operations Decision Hub home"><span class="brand-mark" aria-hidden="true">TCO</span><span>Decision Hub</span></a>
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="./index.html">Overview</a>
-          <a href="./service-operations.html">Service Operations</a>
-          <a href="./customer-retention.html" aria-current="page">Customer Retention</a>
-          <a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a>
-        </nav>
-      </div>
-    </header>
+    <header class="site-header"><div class="shell header-inner"><a class="brand" href="./index.html" aria-label="Decision Hub home"><span class="brand-mark" aria-hidden="true">TCO</span><span>Decision Hub</span></a><nav class="site-nav" aria-label="Primary navigation"><a href="./index.html">Overview</a><a href="./service-operations.html">Service Operations</a><a href="./customer-retention.html" aria-current="page">Customer Retention</a><a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a></nav></div></header>
 
     <main id="main-content">
-      <section class="hero">
-        <div class="shell">
-          <p class="eyebrow">Focus area 02 / Customer Retention</p>
-          <h1>Focus outreach where risk signals converge</h1>
-          <p class="hero-copy">Compare observed churn outcomes across contract, payment and support characteristics before designing a measured retention intervention.</p>
-          <div class="hero-meta"><span class="pill">7,043 customers</span><span class="pill">1,869 recorded churns</span><span class="pill">Association, not causation</span></div>
-        </div>
-      </section>
+      <section class="hero"><div class="shell"><p class="eyebrow">Task 2 / two source report pages</p><h1>Customer churn &amp; risk analysis</h1><p class="hero-copy">Two native report views recreate the original exploratory and risk-analysis pages from the supplied customer workbook. They render runtime data, not screenshot pixels.</p><div class="hero-meta"><span class="pill">7,043 customers</span><span class="pill">Two report views</span><span class="pill">Source workbook analysis</span></div></div></section>
 
       <div class="shell">
-        <section class="section" aria-labelledby="retention-kpis-title">
-          <div class="section-header"><div><p class="eyebrow">Portfolio-case signals</p><h2 id="retention-kpis-title">Start with the customer groups that warrant review</h2></div></div>
-          <div class="kpi-grid">
-            <article class="kpi alert"><span class="label">Overall churn rate</span><strong class="value">26.5%</strong><small>1,869 of 7,043 customers</small></article>
-            <article class="kpi alert"><span class="label">Month-to-month churn rate</span><strong class="value">42.7%</strong><small>1,655 of 3,875 customers</small></article>
-            <article class="kpi warn"><span class="label">Electronic-check churn rate</span><strong class="value">45.3%</strong><small>1,071 of 2,365 customers</small></article>
-            <article class="kpi"><span class="label">Mean tenure: churned</span><strong class="value">18.0 mo</strong><small>vs 37.6 months for retained customers</small></article>
+        <div class="report-tabs" data-report-tabs role="tablist" aria-label="Task 2 report pages"><button type="button" role="tab" aria-selected="true" aria-controls="churn-explorer" data-tab-target="churn-explorer">01 / Churn explorer</button><button type="button" role="tab" aria-selected="false" aria-controls="risk-analysis" data-tab-target="risk-analysis">02 / Risk analysis</button></div>
+
+        <section id="churn-explorer" class="report-sheet" role="tabpanel" aria-label="Customer Churn Exploratory Dashboard">
+          <div class="section"><div class="section-header"><div><p class="eyebrow">Original page 1 / customer churn exploratory dashboard</p><h2>Profile the customers recorded as churned</h2><p class="section-intro">This view applies the same outcome lens as the original page: each chart below is calculated over customers marked <em>Churn = Yes</em>.</p></div></div>
+            <div class="kpi-grid"><article class="kpi alert"><span class="label">Customer churn</span><strong class="value" data-metric="churn.pageOne.kpis.churnedCustomers"></strong><small>Customers marked as churned</small></article><article class="kpi warn"><span class="label">Tech tickets</span><strong class="value" data-metric="churn.pageOne.kpis.techTickets"></strong><small>Sum for churned customers</small></article><article class="kpi"><span class="label">Admin tickets</span><strong class="value" data-metric="churn.pageOne.kpis.adminTickets"></strong><small>Sum for churned customers</small></article><article class="kpi"><span class="label">Total annual charges</span><strong class="value" data-metric="churn.pageOne.kpis.totalCharges" data-format="currency-compact"></strong><small>Sum for churned customers</small></article></div>
+          </div>
+
+          <div class="section grid grid-3" aria-label="Demographic, account and service profiles">
+            <article class="chart-card"><p class="eyebrow">Demographics</p><h2>Gender and tenure</h2><div class="chart-host" data-chart="donut" data-source="churn.pageOne.demographics.gender" data-value="share" data-format="percent" data-center="Churned"></div><div class="chart-host" data-chart="bar" data-source="churn.pageOne.demographics.loyalty" data-value="share" data-format="percent" data-max="100" data-color="gold"></div><p class="source-line"><span data-metric="churn.pageOne.demographics.seniorCitizen" data-format="percent"></span> senior citizens; <span data-metric="churn.pageOne.demographics.partner" data-format="percent"></span> with partners; <span data-metric="churn.pageOne.demographics.dependents" data-format="percent"></span> with dependents.</p></article>
+            <article class="chart-card"><p class="eyebrow">Account information</p><h2>Payment, billing and contract</h2><div class="chart-host" data-chart="bar" data-source="churn.pageOne.account.payment" data-value="share" data-format="percent" data-max="100" data-color="gold"></div><div class="chart-host" data-chart="donut" data-source="churn.pageOne.account.paperless" data-value="share" data-format="percent" data-center="Paperless"></div><div class="chart-host" data-chart="bar" data-source="churn.pageOne.account.contract" data-value="share" data-format="percent" data-max="100" data-color="coral"></div><p class="source-line">Average monthly charges: <strong data-metric="churn.pageOne.kpis.averageMonthlyCharges" data-format="currency"></strong>; average total charges: <strong data-metric="churn.pageOne.kpis.averageTotalCharges" data-format="currency"></strong>.</p></article>
+            <article class="chart-card"><p class="eyebrow">Services signed up</p><h2>Service adoption among churned customers</h2><div class="chart-host" data-chart="bar" data-source="churn.pageOne.services.adoption" data-value="share" data-format="percent" data-max="100"></div><h3 style="margin-top:1.25rem;">Internet service</h3><div class="chart-host" data-chart="donut" data-source="churn.pageOne.services.internetService" data-value="share" data-format="percent" data-center="Internet"></div><h3 style="margin-top:1.25rem;">Multiple lines</h3><div class="chart-host" data-chart="donut" data-source="churn.pageOne.services.multipleLines" data-value="share" data-format="percent" data-center="Lines"></div></article>
           </div>
         </section>
 
-        <section class="section grid grid-2" aria-labelledby="retention-charts-title">
-          <div class="chart-card">
-            <p class="eyebrow">Contract profile</p>
-            <h2 id="retention-charts-title">Churn rate by contract</h2>
-            <p class="chart-note">Recorded churns divided by customers within each contract type.</p>
-            <div class="bar-chart" role="img" aria-label="Churn rates by contract: month-to-month 42.7%, one year 11.3%, two year 2.8%.">
-              <div class="bar-row"><span class="bar-label">Month-to-month</span><span class="bar-track"><span class="bar coral" style="width:85.4%"></span></span><span class="bar-value">42.7%</span></div>
-              <div class="bar-row"><span class="bar-label">One year</span><span class="bar-track"><span class="bar gold" style="width:22.6%"></span></span><span class="bar-value">11.3%</span></div>
-              <div class="bar-row"><span class="bar-label">Two year</span><span class="bar-track"><span class="bar" style="width:5.6%"></span></span><span class="bar-value">2.8%</span></div>
-            </div>
-          </div>
-          <div class="chart-card">
-            <p class="eyebrow">Payment profile</p>
-            <h2>Churn rate by payment method</h2>
-            <p class="chart-note">Payment method is an observed segment attribute, not a causal explanation.</p>
-            <div class="bar-chart" role="img" aria-label="Churn rates by payment method: electronic check 45.3%, mailed check 19.1%, bank transfer automatic 16.7%, credit card automatic 15.2%.">
-              <div class="bar-row"><span class="bar-label">Electronic check</span><span class="bar-track"><span class="bar coral" style="width:90.6%"></span></span><span class="bar-value">45.3%</span></div>
-              <div class="bar-row"><span class="bar-label">Mailed check</span><span class="bar-track"><span class="bar gold" style="width:38.2%"></span></span><span class="bar-value">19.1%</span></div>
-              <div class="bar-row"><span class="bar-label">Bank transfer</span><span class="bar-track"><span class="bar" style="width:33.4%"></span></span><span class="bar-value">16.7%</span></div>
-              <div class="bar-row"><span class="bar-label">Credit card</span><span class="bar-track"><span class="bar" style="width:30.4%"></span></span><span class="bar-value">15.2%</span></div>
-            </div>
-          </div>
+        <section id="risk-analysis" class="report-sheet" role="tabpanel" aria-label="Customer Risk Analysis Dashboard" hidden>
+          <div class="section"><div class="section-header"><div><p class="eyebrow">Original page 2 / customer risk analysis dashboard</p><h2>Compare churn signals across the whole customer population</h2><p class="section-intro">Unlike the explorer page, these charts use all source customers so the churn rate can be compared to the total population in each group.</p></div></div><div class="kpi-grid"><article class="kpi"><span class="label">Total customer charges</span><strong class="value" data-metric="churn.pageTwo.kpis.totalCharges" data-format="currency-compact"></strong><small>Sum across all source customers</small></article><article class="kpi alert"><span class="label">Churned customers</span><strong class="value" data-metric="churn.pageOne.kpis.churnedCustomers"></strong><small>Outcome count used in rate calculations</small></article><article class="kpi warn"><span class="label">Churned tech tickets</span><strong class="value" data-metric="churn.pageOne.kpis.techTickets"></strong><small>Compared with retained-customer tickets below</small></article><article class="kpi"><span class="label">Churned admin tickets</span><strong class="value" data-metric="churn.pageOne.kpis.adminTickets"></strong><small>Compared with retained-customer tickets below</small></article></div></div>
+          <div class="section grid grid-2"><article class="chart-card"><p class="eyebrow">Internet services</p><h2>Churn rate by internet service</h2><p class="chart-note">The original page combines customer count and churn rate. This accessible recreation presents rate visually and the customer count in its data table.</p><div class="chart-host" data-chart="bar" data-source="churn.pageTwo.internetChurn" data-value="churnRate" data-format="percent" data-max="50" data-color="coral"></div><div class="chart-host" data-chart="table" data-source="churn.pageTwo.internetChurn" data-columns="label:Internet service,customers:Customers,churned:Churned,churnRate:Churn rate:percent"></div></article><article class="chart-card"><p class="eyebrow">Payment method</p><h2>Churn rate by payment method</h2><p class="chart-note">Monthly charges are shown in the data table, alongside the rate visual.</p><div class="chart-host" data-chart="bar" data-source="churn.pageTwo.paymentRisk" data-value="churnRate" data-format="percent" data-max="50" data-color="gold"></div><div class="chart-host" data-chart="table" data-source="churn.pageTwo.paymentRisk" data-columns="label:Payment method,customers:Customers,churnRate:Churn rate:percent,monthlyCharges:Monthly charges:currency-compact"></div></article><article class="chart-card"><p class="eyebrow">Support workload</p><h2>Admin and tech tickets by outcome</h2><div class="chart-host" data-chart="grouped" data-source="churn.pageTwo.ticketsByOutcome" data-series="adminTickets:Admin tickets:gold,techTickets:Tech tickets:coral"></div></article><article class="chart-card"><p class="eyebrow">Charges by churn &amp; service</p><h2>Underlying charge totals</h2><div class="chart-host" data-chart="table" data-source="churn.pageTwo.chargesByOutcomeAndService" data-columns="outcome:Churn outcome,service:Internet service,value:Total charges:currency-compact"></div></article></div>
+          <div class="section"><p class="eyebrow">Contract type &amp; subscription length</p><h2>Churn rate across contract and loyalty groups</h2><div class="grid grid-3" style="margin-top:1.3rem;"><article class="chart-card"><h3>Month-to-month</h3><div class="chart-host" data-chart="bar" data-source="churn.pageTwo.contractTenureByContract.Month-to-month" data-value="churnRate" data-format="percent" data-max="60" data-color="coral"></div></article><article class="chart-card"><h3>One year</h3><div class="chart-host" data-chart="bar" data-source="churn.pageTwo.contractTenureByContract.One year" data-value="churnRate" data-format="percent" data-max="60" data-color="gold"></div></article><article class="chart-card"><h3>Two year</h3><div class="chart-host" data-chart="bar" data-source="churn.pageTwo.contractTenureByContract.Two year" data-value="churnRate" data-format="percent" data-max="60"></div></article></div></div>
         </section>
 
-        <section class="section" aria-labelledby="customer-comparison-title">
-          <div class="section-header"><div><p class="eyebrow">Customer experience context</p><h2 id="customer-comparison-title">Churned customers show different observed averages</h2><p class="section-intro">This comparison provides a starting point for validation. It does not prove that tenure, charge level or support contact caused a customer to churn.</p></div></div>
-          <div class="grid grid-3">
-            <article class="card"><span class="card-topline">Mean monthly charge</span><strong class="card-number">74.44</strong><p class="card-description">for churned customers, compared with 61.27 for retained customers.</p></article>
-            <article class="card"><span class="card-topline">Mean technical tickets</span><strong class="card-number">1.16</strong><p class="card-description">for churned customers, compared with 0.15 for retained customers.</p></article>
-            <article class="card"><span class="card-topline">No technical support</span><strong class="card-number">41.6%</strong><p class="card-description">recorded churn rate for customers without technical support, versus 15.2% where support is recorded as yes.</p></article>
-          </div>
-        </section>
+        <section class="section" aria-labelledby="retention-playbook"><p class="eyebrow">Stakeholder decision playbook</p><h2 id="retention-playbook">Use the report to design a testable response</h2><div style="overflow-x:auto; margin-top:1.3rem;"><table class="playbook"><caption>Customer retention decision playbook</caption><thead><tr><th scope="col">Signal</th><th scope="col">Question to validate</th><th scope="col">Recommended action</th><th scope="col">Accountable owner</th><th scope="col">Success measure</th></tr></thead><tbody><tr><td>Explore churn concentration by contract, tenure, payment and service profile.</td><td>Which combinations remain material after controlling for the cohort size?</td><td>Define a governed outreach cohort and a holdout group for a specific intervention.</td><td>Retention Manager</td><td>Churn and offer-acceptance rates for cohort versus holdout.</td></tr><tr><td>Churned customers have <span data-metric="churn.pageOne.kpis.techTickets"></span> technical tickets in total.</td><td>Which incident types or recovery journeys recur before churn?</td><td>Link ticket reasons to account outcomes and test proactive service recovery.</td><td>Customer Care &amp; Technical Support Lead</td><td>Repeat-ticket rate, resolution time and cohort retention.</td></tr></tbody></table></div><p class="source-line">Analysis source: <code>02 Churn-Dataset.xlsx</code>. Both PBIX report pages were inspected read-only to match the intended report structure.</p></section>
 
-        <section class="section" aria-labelledby="retention-definitions-title">
-          <div class="section-header"><div><p class="eyebrow">KPI definitions</p><h2 id="retention-definitions-title">What each retention measure means</h2></div></div>
-          <dl class="definition-grid">
-            <div><dt>Churn rate</dt><dd>Customers marked <em>Yes</em> in the supplied Churn field divided by customers in the selected group.</dd></div>
-            <div><dt>Tenure</dt><dd>Customer tenure field in months. The site presents group averages, not a prediction score.</dd></div>
-            <div><dt>Technical tickets</dt><dd>Mean of the supplied technical-ticket count. Ticket volume requires operational context before it is used for targeting.</dd></div>
-          </dl>
-        </section>
-
-        <section class="section" aria-labelledby="retention-playbook-title">
-          <p class="eyebrow">Stakeholder decision playbook</p>
-          <h2 id="retention-playbook-title">Design a testable retention response</h2>
-          <div style="overflow-x:auto; margin-top:1.3rem;">
-            <table class="playbook">
-              <caption>Customer retention decision playbook</caption>
-              <thead><tr><th scope="col">Signal</th><th scope="col">Question to validate</th><th scope="col">Recommended action</th><th scope="col">Accountable owner</th><th scope="col">Success measure</th></tr></thead>
-              <tbody>
-                <tr><td>Month-to-month customers have a 42.7% recorded churn rate.</td><td>Which service, tenure and contact-history combinations are over-represented in this group?</td><td>Define a governed outreach cohort; compare a specific retention offer or service-recovery treatment against a holdout group.</td><td>Retention Manager</td><td>Churn rate and retention-offer acceptance for the cohort versus holdout.</td></tr>
-                <tr><td>Electronic-check customers have a 45.3% recorded churn rate.</td><td>Is payment method acting as a proxy for a billing, channel or customer-experience issue?</td><td>Review bill-related contacts, failed-payment events and channel journeys before changing the payment experience.</td><td>Billing Product Owner</td><td>Payment-journey completion, billing-contact rate and cohort churn rate.</td></tr>
-                <tr><td>Churned customers average 1.16 technical tickets, versus 0.15 for retained customers.</td><td>Are particular technical incident types or resolution journeys linked to the observed difference?</td><td>Link technical-ticket reason codes to account outcomes; test proactive recovery after validated high-friction incidents.</td><td>Customer Care &amp; Technical Support Lead</td><td>Repeat ticket rate, resolution time and retention within the intervention cohort.</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="source-line">Figure source: <code>02 Churn-Dataset.xlsx</code>. Values are derived from the supplied portfolio-case workbook.</p>
-        </section>
-
-        <section class="section" aria-labelledby="retention-evidence-title">
-          <details class="evidence">
-            <summary id="retention-evidence-title">View original portfolio-case dashboard evidence</summary>
-            <figure>
-              <img src="./assets/evidence/Customer%20Churn%20and%20Risk%20Analysis-1.png" alt="Original Power BI case dashboard showing customer churn and risk analysis.">
-              <figcaption>Existing dashboard asset from the original portfolio repository. This static site does not load or embed Power BI.</figcaption>
-            </figure>
-          </details>
-        </section>
+        <section class="section"><details class="evidence"><summary>View the two original Power BI pages used as report-layout reference</summary><figure><img src="./assets/evidence/Customer%20Churn%20and%20Risk%20Analysis-1.png" alt="Original Customer Churn Exploratory Analysis Power BI report page."><figcaption>Original Task 2 page 1: Churn Exploratory Analysis.</figcaption></figure><figure style="margin-top:1.3rem;"><img src="./assets/evidence/Customer%20Churn%20and%20Risk%20Analysis-2.png" alt="Original Customer Risk Analysis Power BI report page."><figcaption>Original Task 2 page 2: Customer Risk Analysis.</figcaption></figure></details></section>
       </div>
     </main>
-
-    <footer class="footer"><div class="shell footer-grid"><div><h2>Independent portfolio project</h2><p class="footer-disclaimer">Inspired by the PwC Switzerland / Forage virtual case experience. This product is independently created for portfolio purposes and is not commissioned, endorsed by, or affiliated with PwC.</p></div><div><h2>Next decision area</h2><ul><li><a href="./service-operations.html">Service Operations</a></li><li><a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a></li></ul></div></div></footer>
+    <footer class="footer"><div class="shell footer-grid"><div><h2>Independent portfolio project</h2><p class="footer-disclaimer">Inspired by the PwC Switzerland / Forage virtual case experience. This product is independently created for portfolio purposes and is not commissioned, endorsed by, or affiliated with PwC.</p></div><div><h2>Explore the decision hub</h2><ul><li><a href="./service-operations.html">Service Operations</a></li><li><a href="./diversity-inclusion.html">Diversity &amp; Inclusion</a></li></ul></div></div></footer>
   </body>
 </html>
