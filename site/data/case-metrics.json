@@ -1,0 +1,1007 @@
+{
+  "generatedFrom": "Source workbooks in this repository; see scripts/analyze_case_data.py for every aggregation.",
+  "callCenter": {
+    "source": "Task 1 - Call Centre Trends/01 Call-Center-Dataset.xlsx",
+    "reportPages": [
+      "Call Center Trend Analysis Dashboard"
+    ],
+    "kpis": {
+      "totalCalls": 5000,
+      "averageAnswerSpeed": 67.52,
+      "averageSatisfaction": 3.4,
+      "answered": 4054,
+      "answeredRate": 81.08,
+      "resolved": 3646,
+      "resolvedRate": 72.92
+    },
+    "charts": {
+      "answerOutcome": [
+        {
+          "label": "Answered",
+          "count": 4054,
+          "share": 81.08
+        },
+        {
+          "label": "Not answered",
+          "count": 946,
+          "share": 18.92
+        }
+      ],
+      "resolutionOutcome": [
+        {
+          "label": "Resolved",
+          "count": 3646,
+          "share": 72.92
+        },
+        {
+          "label": "Not resolved",
+          "count": 1354,
+          "share": 27.08
+        }
+      ],
+      "hourlyCalls": [
+        {
+          "label": 9,
+          "count": 547
+        },
+        {
+          "label": 10,
+          "count": 529
+        },
+        {
+          "label": 11,
+          "count": 590
+        },
+        {
+          "label": 12,
+          "count": 547
+        },
+        {
+          "label": 13,
+          "count": 594
+        },
+        {
+          "label": 14,
+          "count": 499
+        },
+        {
+          "label": 15,
+          "count": 531
+        },
+        {
+          "label": 16,
+          "count": 566
+        },
+        {
+          "label": 17,
+          "count": 583
+        },
+        {
+          "label": 18,
+          "count": 14
+        }
+      ],
+      "monthlyCalls": [
+        {
+          "label": "January",
+          "answered": 1455,
+          "unanswered": 317,
+          "total": 1772
+        },
+        {
+          "label": "February",
+          "answered": 1298,
+          "unanswered": 318,
+          "total": 1616
+        },
+        {
+          "label": "March",
+          "answered": 1301,
+          "unanswered": 311,
+          "total": 1612
+        }
+      ],
+      "agentStatistics": [
+        {
+          "label": "Becky",
+          "answered": 517,
+          "resolved": 462,
+          "satisfaction": 3.37,
+          "answer_speed": 65.33
+        },
+        {
+          "label": "Dan",
+          "answered": 523,
+          "resolved": 471,
+          "satisfaction": 3.45,
+          "answer_speed": 67.28
+        },
+        {
+          "label": "Diane",
+          "answered": 501,
+          "resolved": 452,
+          "satisfaction": 3.41,
+          "answer_speed": 66.27
+        },
+        {
+          "label": "Greg",
+          "answered": 502,
+          "resolved": 455,
+          "satisfaction": 3.4,
+          "answer_speed": 68.44
+        },
+        {
+          "label": "Jim",
+          "answered": 536,
+          "resolved": 485,
+          "satisfaction": 3.39,
+          "answer_speed": 66.34
+        },
+        {
+          "label": "Joe",
+          "answered": 484,
+          "resolved": 436,
+          "satisfaction": 3.33,
+          "answer_speed": 70.99
+        },
+        {
+          "label": "Martha",
+          "answered": 514,
+          "resolved": 461,
+          "satisfaction": 3.47,
+          "answer_speed": 69.49
+        },
+        {
+          "label": "Stewart",
+          "answered": 477,
+          "resolved": 424,
+          "satisfaction": 3.4,
+          "answer_speed": 66.18
+        }
+      ]
+    }
+  },
+  "churn": {
+    "source": "Task 2 - Customer Retention/02 Churn-Dataset.xlsx",
+    "reportPages": [
+      "Customer Churn Exploratory Dashboard",
+      "Customer Risk Analysis Dashboard"
+    ],
+    "kpis": {
+      "totalCustomers": 7043,
+      "overallChurnRate": 26.5
+    },
+    "pageOne": {
+      "kpis": {
+        "churnedCustomers": 1869,
+        "techTickets": 2173,
+        "adminTickets": 885,
+        "totalCharges": 2862926.9,
+        "averageMonthlyCharges": 74.44,
+        "averageTotalCharges": 1531.8
+      },
+      "demographics": {
+        "gender": [
+          {
+            "label": "Female",
+            "count": 939,
+            "share": 50.2
+          },
+          {
+            "label": "Male",
+            "count": 930,
+            "share": 49.8
+          }
+        ],
+        "seniorCitizen": 25.5,
+        "partner": 35.8,
+        "dependents": 17.4,
+        "loyalty": [
+          {
+            "label": "< 1 year",
+            "count": 1037,
+            "share": 55.5
+          },
+          {
+            "label": "< 2 years",
+            "count": 294,
+            "share": 15.7
+          },
+          {
+            "label": "< 3 years",
+            "count": 180,
+            "share": 9.6
+          },
+          {
+            "label": "< 4 years",
+            "count": 145,
+            "share": 7.8
+          },
+          {
+            "label": "< 5 years",
+            "count": 120,
+            "share": 6.4
+          },
+          {
+            "label": "< 6 years",
+            "count": 93,
+            "share": 5.0
+          }
+        ]
+      },
+      "account": {
+        "payment": [
+          {
+            "label": "Electronic check",
+            "count": 1071,
+            "share": 57.3
+          },
+          {
+            "label": "Mailed check",
+            "count": 308,
+            "share": 16.5
+          },
+          {
+            "label": "Bank transfer (automatic)",
+            "count": 258,
+            "share": 13.8
+          },
+          {
+            "label": "Credit card (automatic)",
+            "count": 232,
+            "share": 12.4
+          }
+        ],
+        "paperless": [
+          {
+            "label": "Yes",
+            "count": 1400,
+            "share": 74.9
+          },
+          {
+            "label": "No",
+            "count": 469,
+            "share": 25.1
+          }
+        ],
+        "contract": [
+          {
+            "label": "Month-to-month",
+            "count": 1655,
+            "share": 88.6
+          },
+          {
+            "label": "One year",
+            "count": 166,
+            "share": 8.9
+          },
+          {
+            "label": "Two year",
+            "count": 48,
+            "share": 2.6
+          }
+        ]
+      },
+      "services": {
+        "adoption": [
+          {
+            "label": "Phone service",
+            "share": 90.9
+          },
+          {
+            "label": "Streaming TV",
+            "share": 43.6
+          },
+          {
+            "label": "Streaming Movies",
+            "share": 43.8
+          },
+          {
+            "label": "Device protection",
+            "share": 29.2
+          },
+          {
+            "label": "Online backup",
+            "share": 28
+          },
+          {
+            "label": "Tech Support",
+            "share": 16.6
+          },
+          {
+            "label": "Online security",
+            "share": 15.8
+          }
+        ],
+        "multipleLines": [
+          {
+            "label": "Yes",
+            "count": 850,
+            "share": 45.5
+          },
+          {
+            "label": "No",
+            "count": 849,
+            "share": 45.4
+          },
+          {
+            "label": "No phone service",
+            "count": 170,
+            "share": 9.1
+          }
+        ],
+        "internetService": [
+          {
+            "label": "Fiber optic",
+            "count": 1297,
+            "share": 69.4
+          },
+          {
+            "label": "DSL",
+            "count": 459,
+            "share": 24.6
+          },
+          {
+            "label": "No",
+            "count": 113,
+            "share": 6.0
+          }
+        ]
+      }
+    },
+    "pageTwo": {
+      "kpis": {
+        "totalCharges": 16056168.7
+      },
+      "internetChurn": [
+        {
+          "label": "Fiber optic",
+          "customers": 3096,
+          "churned": 1297,
+          "churnRate": 41.9
+        },
+        {
+          "label": "DSL",
+          "customers": 2421,
+          "churned": 459,
+          "churnRate": 19.0
+        },
+        {
+          "label": "No",
+          "customers": 1526,
+          "churned": 113,
+          "churnRate": 7.4
+        }
+      ],
+      "chargesByOutcomeAndService": [
+        {
+          "outcome": "No",
+          "service": "DSL",
+          "value": 4761394.35
+        },
+        {
+          "outcome": "No",
+          "service": "Fiber optic",
+          "value": 7440365.5
+        },
+        {
+          "outcome": "No",
+          "service": "No",
+          "value": 991481.95
+        },
+        {
+          "outcome": "Yes",
+          "service": "DSL",
+          "value": 360016.5
+        },
+        {
+          "outcome": "Yes",
+          "service": "Fiber optic",
+          "value": 2483257.45
+        },
+        {
+          "outcome": "Yes",
+          "service": "No",
+          "value": 19652.95
+        }
+      ],
+      "paymentRisk": [
+        {
+          "label": "Electronic check",
+          "customers": 2365,
+          "churned": 1071,
+          "monthlyCharges": 180345.0,
+          "churnRate": 45.3
+        },
+        {
+          "label": "Mailed check",
+          "customers": 1612,
+          "churned": 308,
+          "monthlyCharges": 70794.3,
+          "churnRate": 19.1
+        },
+        {
+          "label": "Bank transfer (automatic)",
+          "customers": 1544,
+          "churned": 258,
+          "monthlyCharges": 103745.45,
+          "churnRate": 16.7
+        },
+        {
+          "label": "Credit card (automatic)",
+          "customers": 1522,
+          "churned": 232,
+          "monthlyCharges": 101231.85,
+          "churnRate": 15.2
+        }
+      ],
+      "ticketsByOutcome": [
+        {
+          "label": "No",
+          "adminTickets": 2747,
+          "techTickets": 782
+        },
+        {
+          "label": "Yes",
+          "adminTickets": 885,
+          "techTickets": 2173
+        }
+      ],
+      "contractTenure": [
+        {
+          "contract": "Month-to-month",
+          "label": "< 1 year",
+          "customers": 1994,
+          "churned": 1024,
+          "monthlyCharges": 116086.5,
+          "churnRate": 51.4
+        },
+        {
+          "contract": "Month-to-month",
+          "label": "< 2 years",
+          "customers": 737,
+          "churned": 278,
+          "monthlyCharges": 51081.15,
+          "churnRate": 37.7
+        },
+        {
+          "contract": "Month-to-month",
+          "label": "< 3 years",
+          "customers": 486,
+          "churned": 158,
+          "monthlyCharges": 36122.55,
+          "churnRate": 32.5
+        },
+        {
+          "contract": "Month-to-month",
+          "label": "< 4 years",
+          "customers": 316,
+          "churned": 106,
+          "monthlyCharges": 24781.5,
+          "churnRate": 33.5
+        },
+        {
+          "contract": "Month-to-month",
+          "label": "< 5 years",
+          "customers": 234,
+          "churned": 65,
+          "monthlyCharges": 19346.95,
+          "churnRate": 27.8
+        },
+        {
+          "contract": "Month-to-month",
+          "label": "< 6 years",
+          "customers": 108,
+          "churned": 24,
+          "monthlyCharges": 9875.5,
+          "churnRate": 22.2
+        },
+        {
+          "contract": "One year",
+          "label": "< 1 year",
+          "customers": 124,
+          "churned": 13,
+          "monthlyCharges": 4438.9,
+          "churnRate": 10.5
+        },
+        {
+          "contract": "One year",
+          "label": "< 2 years",
+          "customers": 197,
+          "churned": 16,
+          "monthlyCharges": 8841.1,
+          "churnRate": 8.1
+        },
+        {
+          "contract": "One year",
+          "label": "< 3 years",
+          "customers": 250,
+          "churned": 20,
+          "monthlyCharges": 14524.7,
+          "churnRate": 8.0
+        },
+        {
+          "contract": "One year",
+          "label": "< 4 years",
+          "customers": 268,
+          "churned": 35,
+          "monthlyCharges": 17568.6,
+          "churnRate": 13.1
+        },
+        {
+          "contract": "One year",
+          "label": "< 5 years",
+          "customers": 321,
+          "churned": 44,
+          "monthlyCharges": 24116.1,
+          "churnRate": 13.7
+        },
+        {
+          "contract": "One year",
+          "label": "< 6 years",
+          "customers": 313,
+          "churned": 38,
+          "monthlyCharges": 26327.2,
+          "churnRate": 12.1
+        },
+        {
+          "contract": "Two year",
+          "label": "< 1 year",
+          "customers": 68,
+          "churned": 0,
+          "monthlyCharges": 2104.35,
+          "churnRate": 0.0
+        },
+        {
+          "contract": "Two year",
+          "label": "< 2 years",
+          "customers": 90,
+          "churned": 0,
+          "monthlyCharges": 2907.6,
+          "churnRate": 0.0
+        },
+        {
+          "contract": "Two year",
+          "label": "< 3 years",
+          "customers": 96,
+          "churned": 2,
+          "monthlyCharges": 3911.55,
+          "churnRate": 2.1
+        },
+        {
+          "contract": "Two year",
+          "label": "< 4 years",
+          "customers": 178,
+          "churned": 4,
+          "monthlyCharges": 8184.4,
+          "churnRate": 2.2
+        },
+        {
+          "contract": "Two year",
+          "label": "< 5 years",
+          "customers": 277,
+          "churned": 11,
+          "monthlyCharges": 15235.2,
+          "churnRate": 4.0
+        },
+        {
+          "contract": "Two year",
+          "label": "< 6 years",
+          "customers": 986,
+          "churned": 31,
+          "monthlyCharges": 70662.75,
+          "churnRate": 3.1
+        }
+      ],
+      "contractTenureByContract": {
+        "Month-to-month": [
+          {
+            "label": "< 1 year",
+            "churnRate": 51.4,
+            "monthlyCharges": 116086.5
+          },
+          {
+            "label": "< 2 years",
+            "churnRate": 37.7,
+            "monthlyCharges": 51081.15
+          },
+          {
+            "label": "< 3 years",
+            "churnRate": 32.5,
+            "monthlyCharges": 36122.55
+          },
+          {
+            "label": "< 4 years",
+            "churnRate": 33.5,
+            "monthlyCharges": 24781.5
+          },
+          {
+            "label": "< 5 years",
+            "churnRate": 27.8,
+            "monthlyCharges": 19346.95
+          },
+          {
+            "label": "< 6 years",
+            "churnRate": 22.2,
+            "monthlyCharges": 9875.5
+          }
+        ],
+        "One year": [
+          {
+            "label": "< 1 year",
+            "churnRate": 10.5,
+            "monthlyCharges": 4438.9
+          },
+          {
+            "label": "< 2 years",
+            "churnRate": 8.1,
+            "monthlyCharges": 8841.1
+          },
+          {
+            "label": "< 3 years",
+            "churnRate": 8.0,
+            "monthlyCharges": 14524.7
+          },
+          {
+            "label": "< 4 years",
+            "churnRate": 13.1,
+            "monthlyCharges": 17568.6
+          },
+          {
+            "label": "< 5 years",
+            "churnRate": 13.7,
+            "monthlyCharges": 24116.1
+          },
+          {
+            "label": "< 6 years",
+            "churnRate": 12.1,
+            "monthlyCharges": 26327.2
+          }
+        ],
+        "Two year": [
+          {
+            "label": "< 1 year",
+            "churnRate": 0.0,
+            "monthlyCharges": 2104.35
+          },
+          {
+            "label": "< 2 years",
+            "churnRate": 0.0,
+            "monthlyCharges": 2907.6
+          },
+          {
+            "label": "< 3 years",
+            "churnRate": 2.1,
+            "monthlyCharges": 3911.55
+          },
+          {
+            "label": "< 4 years",
+            "churnRate": 2.2,
+            "monthlyCharges": 8184.4
+          },
+          {
+            "label": "< 5 years",
+            "churnRate": 4.0,
+            "monthlyCharges": 15235.2
+          },
+          {
+            "label": "< 6 years",
+            "churnRate": 3.1,
+            "monthlyCharges": 70662.75
+          }
+        ]
+      }
+    }
+  },
+  "inclusion": {
+    "source": "Task 3 - Diversity & Inclusion/03 Diversity-Inclusion-Dataset.xlsx (Pharma Group AG sheet)",
+    "reportPages": [
+      "Diversity & Inclusion Analysis Dashboard I",
+      "Diversity & Inclusion Analysis Dashboard II"
+    ],
+    "pageOne": {
+      "kpis": {
+        "womenWorkforceShare": 41,
+        "menWorkforceShare": 59,
+        "overallTurnoverRate": 9.4,
+        "womenPromotionRate": 12.2
+      },
+      "hiringByLevel": [
+        {
+          "label": "1 - Executive",
+          "Female": 2,
+          "Male": 14
+        },
+        {
+          "label": "2 - Director",
+          "Female": 5,
+          "Male": 32
+        },
+        {
+          "label": "3 - Senior Manager",
+          "Female": 10,
+          "Male": 46
+        },
+        {
+          "label": "4 - Manager",
+          "Female": 30,
+          "Male": 52
+        },
+        {
+          "label": "5 - Senior Officer",
+          "Female": 49,
+          "Male": 56
+        },
+        {
+          "label": "6 - Junior Officer",
+          "Female": 109,
+          "Male": 95
+        }
+      ],
+      "promotionByLevel": [
+        {
+          "label": "1 - Executive",
+          "Female": 0.0,
+          "Male": 0.0,
+          "femaleShare": 0.0
+        },
+        {
+          "label": "2 - Director",
+          "Female": 1.0,
+          "Male": 3.0,
+          "femaleShare": 25.0
+        },
+        {
+          "label": "3 - Senior Manager",
+          "Female": 1.0,
+          "Male": 3.0,
+          "femaleShare": 25.0
+        },
+        {
+          "label": "4 - Manager",
+          "Female": 3.0,
+          "Male": 7.0,
+          "femaleShare": 30.0
+        },
+        {
+          "label": "5 - Senior Officer",
+          "Female": 2.0,
+          "Male": 13.0,
+          "femaleShare": 13.3
+        },
+        {
+          "label": "6 - Junior Officer",
+          "Female": 11.0,
+          "Male": 7.0,
+          "femaleShare": 61.1
+        }
+      ],
+      "timeInLevel": [
+        {
+          "label": "1 - Executive",
+          "Female": 3.0,
+          "Male": 1.86
+        },
+        {
+          "label": "2 - Director",
+          "Female": 3.4,
+          "Male": 3.09
+        },
+        {
+          "label": "3 - Senior Manager",
+          "Female": 1.8,
+          "Male": 2.33
+        },
+        {
+          "label": "4 - Manager",
+          "Female": 2.37,
+          "Male": 2.46
+        },
+        {
+          "label": "5 - Senior Officer",
+          "Female": 2.29,
+          "Male": 2.68
+        },
+        {
+          "label": "6 - Junior Officer",
+          "Female": 2.13,
+          "Male": 2.2
+        }
+      ],
+      "performanceByLevel": [
+        {
+          "label": "1 - Executive",
+          "Female": null,
+          "Male": null
+        },
+        {
+          "label": "2 - Director",
+          "Female": 2.75,
+          "Male": 2.45
+        },
+        {
+          "label": "3 - Senior Manager",
+          "Female": 3.0,
+          "Male": 2.31
+        },
+        {
+          "label": "4 - Manager",
+          "Female": 2.48,
+          "Male": 2.46
+        },
+        {
+          "label": "5 - Senior Officer",
+          "Female": 2.34,
+          "Male": 2.41
+        },
+        {
+          "label": "6 - Junior Officer",
+          "Female": 2.38,
+          "Male": 2.41
+        }
+      ]
+    },
+    "pageTwo": {
+      "kpis": {
+        "averageRatingMen": 2.41,
+        "averageRatingWomen": 2.42,
+        "age20to29": 223,
+        "womenExecutiveShareFY21": 15.8
+      },
+      "performanceDistribution": [
+        {
+          "label": "1",
+          "Female": 7,
+          "Male": 12
+        },
+        {
+          "label": "2",
+          "Female": 86,
+          "Male": 138
+        },
+        {
+          "label": "3",
+          "Female": 60,
+          "Male": 91
+        },
+        {
+          "label": "4",
+          "Female": 7,
+          "Male": 12
+        }
+      ],
+      "executiveBalance": {
+        "fy20": [
+          {
+            "label": "Male",
+            "count": 14,
+            "share": 87.5
+          },
+          {
+            "label": "Female",
+            "count": 2,
+            "share": 12.5
+          }
+        ],
+        "fy21": [
+          {
+            "label": "Male",
+            "count": 16,
+            "share": 84.2
+          },
+          {
+            "label": "Female",
+            "count": 3,
+            "share": 15.8
+          }
+        ]
+      },
+      "ageLevel": [
+        {
+          "ageGroup": "16 to 19",
+          "level": "6 - Junior Officer",
+          "count": 6
+        },
+        {
+          "ageGroup": "20 to 29",
+          "level": "5 - Senior Officer",
+          "count": 55
+        },
+        {
+          "ageGroup": "20 to 29",
+          "level": "6 - Junior Officer",
+          "count": 160
+        },
+        {
+          "ageGroup": "30 to 39",
+          "level": "1 - Executive",
+          "count": 2
+        },
+        {
+          "ageGroup": "30 to 39",
+          "level": "2 - Director",
+          "count": 12
+        },
+        {
+          "ageGroup": "30 to 39",
+          "level": "3 - Senior Manager",
+          "count": 37
+        },
+        {
+          "ageGroup": "30 to 39",
+          "level": "4 - Manager",
+          "count": 66
+        },
+        {
+          "ageGroup": "30 to 39",
+          "level": "5 - Senior Officer",
+          "count": 41
+        },
+        {
+          "ageGroup": "30 to 39",
+          "level": "6 - Junior Officer",
+          "count": 3
+        },
+        {
+          "ageGroup": "40 to 49",
+          "level": "1 - Executive",
+          "count": 13
+        },
+        {
+          "ageGroup": "40 to 49",
+          "level": "2 - Director",
+          "count": 19
+        },
+        {
+          "ageGroup": "40 to 49",
+          "level": "3 - Senior Manager",
+          "count": 19
+        },
+        {
+          "ageGroup": "40 to 49",
+          "level": "4 - Manager",
+          "count": 13
+        },
+        {
+          "ageGroup": "50 to 59",
+          "level": "1 - Executive",
+          "count": 2
+        },
+        {
+          "ageGroup": "50 to 59",
+          "level": "2 - Director",
+          "count": 1
+        },
+        {
+          "ageGroup": "50 to 59",
+          "level": "3 - Senior Manager",
+          "count": 1
+        },
+        {
+          "ageGroup": "60 to 69",
+          "level": "1 - Executive",
+          "count": 2
+        },
+        {
+          "ageGroup": "60 to 69",
+          "level": "2 - Director",
+          "count": 1
+        }
+      ],
+      "promotionRate": [
+        {
+          "label": "Female",
+          "eligible": 148,
+          "promoted": 18,
+          "rate": 12.2
+        },
+        {
+          "label": "Male",
+          "eligible": 228,
+          "promoted": 33,
+          "rate": 14.5
+        }
+      ]
+    }
+  }
+}

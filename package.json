@@ -1,0 +1,11 @@
+{
+  "name": "telecom-customer-operations-decision-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A static, evidence-led portfolio product for operational decision support.",
+  "scripts": {
+    "analyze": "python scripts/analyze_case_data.py",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs"
+  }
+}
