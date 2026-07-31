@@ -6,7 +6,7 @@ A source-driven portfolio product for operational decision support.
 
 ## About
 
-This independent portfolio product is inspired by the [PwC Switzerland Power BI in Data Analytics virtual case experience on Forage](https://www.theforage.com/virtual-internships/prototype/a87GpgE6tiku7q3gu/Power%20BI%20in%20Data%20Analytics?ref=zYi2CnpbWjhcS7sAk). It extends the three case themes into a browser-based decision hub that communicates findings, evidence, and practical next steps for stakeholders.
+This portfolio product is inspired by the [PwC Switzerland Power BI in Data Analytics virtual case experience on Forage](https://www.theforage.com/virtual-internships/prototype/a87GpgE6tiku7q3gu/Power%20BI%20in%20Data%20Analytics?ref=zYi2CnpbWjhcS7sAk). It extends the three case themes into a browser-based decision hub that communicates findings, evidence, and practical next steps for stakeholders.
 
 It is not commissioned, endorsed by, or affiliated with PwC.
 
