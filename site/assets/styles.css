@@ -156,7 +156,7 @@ dd { margin: 0.35rem 0 0; color: var(--ink-soft); font-size: 0.86rem; }
 .data-bar-row { display: grid; grid-template-columns: minmax(7.5rem, 1fr) minmax(8rem, 2.4fr) auto; align-items: center; gap: 0.72rem; }
 .data-bar-label { color: #334e68; font-size: 0.84rem; font-weight: 720; }
 .data-bar-track, .stacked-track { display: flex; overflow: hidden; height: 1.1rem; background: #eaf0f5; border-radius: 999px; }
-.data-bar-fill { display: block; min-width: 1px; height: 100%; border-radius: inherit; background: var(--teal); }
+.data-bar-fill { display: block; min-width: 0; height: 100%; border-radius: inherit; background: var(--teal); }
 .data-bar-fill.teal { background: var(--teal); }
 .data-bar-fill.gold { background: var(--gold); }
 .data-bar-fill.coral { background: var(--coral); }
