@@ -270,7 +270,7 @@ def inclusion_metrics() -> dict:
     promotion = (
         people.loc[people["Promotion in FY21?"].eq("Yes")]
         .groupby([level_fy20, "Gender"], observed=True)
-        .size().unstack(fill_value=0).reindex(level_order).reset_index()
+        .size().unstack(fill_value=0).reindex(level_order).fillna(0).reset_index()
         .rename(columns={level_fy20: "label"})
     )
     promotion["Female"] = promotion.get("Female", 0)

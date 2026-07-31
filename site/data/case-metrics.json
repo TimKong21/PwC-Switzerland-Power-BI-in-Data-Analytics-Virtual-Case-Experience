@@ -741,9 +741,9 @@
       "promotionByLevel": [
         {
           "label": "1 - Executive",
-          "Female": null,
-          "Male": null,
-          "femaleShare": null
+          "Female": 0.0,
+          "Male": 0.0,
+          "femaleShare": 0.0
         },
         {
           "label": "2 - Director",

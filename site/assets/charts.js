@@ -143,8 +143,16 @@ function renderLine(host, rows) {
 
 function renderTable(host, rows) {
   const fields = host.dataset.columns.split(",").map((entry) => {
-    const [key, label, formatType = "number"] = entry.split(":");
-    return { key, label, format: (value) => key === "label" ? value : format(value, formatType) };
+    const [key, label, formatType] = entry.split(":");
+    return {
+      key,
+      label,
+      format: (value) => {
+        if (value === undefined || value === null) return "—";
+        if (formatType) return format(value, formatType);
+        return typeof value === "number" ? format(value) : String(value);
+      },
+    };
   });
   host.innerHTML = `<div class="table-wrap"><table class="data-table"><thead><tr>${fields.map((field) => `<th scope="col">${escapeHtml(field.label)}</th>`).join("")}</tr></thead><tbody>${rows.map((row) => `<tr>${fields.map((field) => `<td>${escapeHtml(field.format(row[field.key]))}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
 }
