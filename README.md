@@ -1,63 +1,70 @@
-# Data Analytics and Visualization for Business Impact with Power BI
+# Telecom Customer Operations Decision Hub
 
-## Project Overview
+[![Live site](https://img.shields.io/badge/Live%20site-GitHub%20Pages-007C7C?style=flat-square)](https://timkong21.github.io/telecom-customer-operations-decision-hub/)
 
-This project is part of the [PwC Switzerland Power BI in Data Analytics Virtual Case Experience](https://www.theforage.com/virtual-internships/prototype/a87GpgE6tiku7q3gu/Power%20BI%20in%20Data%20Analytics?ref=zYi2CnpbWjhcS7sAk), demonstrating the application of digital tools in data visualization, automation, data cleansing, and more to address common business challenges. It features a series of Power BI dashboards focusing on Call Centre Trends, Customer Retention, and Diversity & Inclusion. Each dashboard provides actionable insights into different facets of business operations and strategic planning, aiding PwC Switzerland and its clients in enhancing operational efficiency, fostering customer loyalty, and promoting a more inclusive workplace. 
+A source-driven portfolio product for operational decision support.
 
-Through meticulous data analysis and visualization, this project aims to support informed decision-making and highlight areas for improvement and innovation.
+## About
 
-<p align="center">
-    <img src="README%20assests/Project_Themes.png" alt=" Intro image" style="width: 80%"/>
-</p>
+This independent portfolio product is inspired by the [PwC Switzerland Power BI in Data Analytics virtual case experience on Forage](https://www.theforage.com/virtual-internships/prototype/a87GpgE6tiku7q3gu/Power%20BI%20in%20Data%20Analytics?ref=zYi2CnpbWjhcS7sAk). It extends the three case themes into a browser-based decision hub that communicates findings, evidence, and practical next steps for stakeholders.
 
-## Installation and Usage Instructions
+It is not commissioned, endorsed by, or affiliated with PwC.
 
-### Installation
+## Live product
 
-Power BI Desktop is required to view and interact with the dashboards. If not already installed, it can be downloaded from the [official Microsoft Power BI website](https://powerbi.microsoft.com/en-us/desktop/). Installation instructions are provided on the site.
+Visit the [Telecom Customer Operations Decision Hub](https://timkong21.github.io/telecom-customer-operations-decision-hub/).
 
-### Usage
+## Decision areas
 
-The `.pbix` files associated with each dashboard are hosted within this repository. After installing Power BI Desktop, download the `.pbix` files from the repository and open them with Power BI Desktop. The data sources are embedded within the files, eliminating the need for additional setup to explore the visualizations. Users can navigate through the dashboards using the tabs at the bottom of the Power BI interface to explore different visualizations and insights.
+| Area | Product focus | Source material |
+| --- | --- | --- |
+| Service operations | Call demand, resolution outcomes, and agent performance | Task 1: Call Centre Trends |
+| Customer retention | Churn risk signals, customer segments, and intervention priorities | Task 2: Customer Retention |
+| Diversity & inclusion | Representation, promotions, performance, and turnover context | Task 3: Diversity & Inclusion |
 
-To download the `.pbix` files, navigate to the folder in this repository where they are stored, select a file, and use the 'Download' button. Cloning or downloading the entire repository is an alternative method for accessing all files.
+## How the hub is built
 
-## Dashboards and Visualizations
+The hub is a static, source-driven reporting product. `scripts/analyze_case_data.py` reads the supplied source workbooks and produces [`site/data/case-metrics.json`](site/data/case-metrics.json). The site then renders those metrics as native browser charts, tables, and recommended decision actions.
 
-### Call Centre Trends
+The live hub is deliberately different from the original Power BI reference files:
 
-The first dashboard provides a comprehensive view of call centre metrics, focusing on customer satisfaction, call volumes, and agent performance. It aids in identifying areas for improvement in call centre operations. 
-
-Access [here](https://www.novypro.com/project/pwc-switzerland-virtual-case-experience---task-1-call-center-trends-power-bi) for live and interactive dashboards.
-
-<p align="center">
-    <img src="README%20assests/Call%20Centre%20Trends-1.png" alt="Call Centre Trends" style="width: 80%"/>
-</p>
-
-### Customer Retention
-
-This dashboard was developed in response to a request from the telecom's Retention Manager, showcasing key metrics related to customer loyalty and retention. It visualizes data to predict customer churn and identifies potential strategies to enhance customer retention.
-
-Access [here](https://www.novypro.com/project/pwc-switzerland-virtual-case-experience---task-2-customer-churn-and-risk-analysis-power-bi) for live and interactive dashboards.
+- The web product is publicly viewable, responsive, and designed for concise stakeholder reporting.
+- The `.pbix` files remain in the task folders as historical reference materials that can be opened in Power BI Desktop.
+- Original screenshots in [`README assests`](README%20assests) are retained as portfolio evidence; the live charts are calculated from the supplied workbooks rather than embedded from an external dashboard service.
 
 <p align="center">
-    <img src="README%20assests/Customer%20Churn%20and%20Risk%20Analysis-1.png" alt="Customer Retention 1" style="width: 80%"/>
+  <img src="README%20assests/Project_Themes.png" alt="The three decision areas covered by the hub" style="width: 80%" />
 </p>
 
-<p align="center">
-    <img src="README%20assests/Customer%20Churn%20and%20Risk%20Analysis-2.png" alt="Customer Retention 2" style="width: 80%"/>
-</p>
+## Run locally
 
-### Diversity & Inclusion
+Prerequisites: Node.js 20+ and Python 3 with `pandas` available.
 
-Focusing on the telecom client's goal of improving gender balance at the executive management level, this dashboard visualizes metrics related to diversity and inclusion, offering insights into current trends and areas for action.
+```bash
+npm run analyze
+npm run build
+npm run preview
+```
 
-Access [here](https://www.novypro.com/project/pwc-switzerland-virtual-case-experience---task-3-diversity--inclusion-power-bi) for live and interactive dashboards.
+`analyze` regenerates the auditable metrics JSON, `build` creates the static `dist` output, and `preview` prints the local URL to open.
 
-<p align="center">
-    <img src="README%20assests/Diversity%20&%20Inclusion-1.png" alt="Diversity & Inclusion 1" style="width: 80%"/>
-</p>
+## Deploy to GitHub Pages
 
-<p align="center">
-    <img src="README%20assests/Diversity%20&%20Inclusion-2.png" alt="Diversity & Inclusion 2" style="width: 80%"/>
-</p>
+The repository uses the existing manual **Deploy GitHub Pages** workflow.
+
+1. Push the intended commit to `main`.
+2. In GitHub, open **Actions** and select **Deploy GitHub Pages**.
+3. Choose **Run workflow**, retaining the `main` branch.
+4. After the run succeeds, verify the [live hub](https://timkong21.github.io/telecom-customer-operations-decision-hub/).
+
+The workflow regenerates the static site and deploys its artifact; do not commit `dist`.
+
+## Evidence and limitations
+
+- This is portfolio-case data, not a live telecom operating system or a production decision engine.
+- The visual relationships are descriptive associations; they do not establish causality.
+- The supplied Diversity & Inclusion PBIX reference reports 10.1% turnover. The supplied workbook calculates 9.4% (47 of 500 FY20 leavers); the web hub displays the auditable workbook result and calls out this reconciliation.
+
+## License and case-material notice
+
+Author-created code and documentation are available under the [MIT License](LICENSE). The supplied workbooks, PBIX files, reference screenshots, external marks, and other case materials are excluded from that grant; see [NOTICE.md](NOTICE.md).
